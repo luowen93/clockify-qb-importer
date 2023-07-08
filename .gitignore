@@ -1,0 +1,7 @@
+flagged/
+dist/
+venv/
+build/
+__pycache__/
+Invoice*
+*.spec
