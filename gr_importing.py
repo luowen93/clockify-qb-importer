@@ -1,5 +1,5 @@
 import gradio as gr
-from aligned_vision_qb import create_invoice
+from utils import create_invoice
 
 # Inputs
 client = gr.inputs.Textbox(default = 'Aligned Vision')
