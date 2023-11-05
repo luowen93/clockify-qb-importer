@@ -48,7 +48,7 @@ def xlsx2dict(fp:str):
     vals = df.values
 
     # List of dicts
-    d = [{'project':v[0], 'hours': v[1], 'rate': v[2], 'total':v[3]}for v in vals]
+    d = [{'project':v[0], 'hours': v[1], 'rate': v[2], 'total': round(v[3],2) }for v in vals]
 
     return d
 
@@ -85,7 +85,7 @@ def create_invoice(input_xlsx:str,customer:str,invoice_date:str,invoice_number =
                 terms,
                 None,
                 None,
-                hours,
+                'Hours',
                 project,
                 hours,
                 rate,
