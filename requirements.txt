@@ -1,2 +1,4 @@
 gradio
 openpyxl
+pandas
+python-dateutil

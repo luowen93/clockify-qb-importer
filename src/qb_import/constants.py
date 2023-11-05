@@ -1,0 +1,16 @@
+QB_COLUMNS = [
+    "*InvoiceNo",
+    "*Customer",
+    "*InvoiceDate",
+    "*DueDate",
+    "Terms",
+    "Location",
+    "Memo",
+    "Item(Product/Service)",
+    "ItemDescription",
+    "ItemQuantity",
+    "ItemRate",
+    "*ItemAmount",
+    "ItemTaxAmount",
+    "Currency",
+]

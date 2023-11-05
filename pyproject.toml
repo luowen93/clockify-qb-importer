@@ -1,0 +1,26 @@
+[project]
+name = "qb_import"
+description = "Import clockify excel summary reports into Quickbooks format"
+authors = [
+    {name = "Owen Lu", email = "owenl@metrized.com" }
+]
+requires-python = ">=3.7"
+dynamic = ["version", "readme"]
+dependencies = [
+    "click"
+]
+
+[project.scripts]
+qb_import = "qb_import.cli:main"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "black", "pytest", "pre-commit", "ruff"] # Developer tools
+
+[tool.setuptools.dynamic]
+version = { attr = "qb_import.__version__"}
+readme = { file = ["README.md"] }
+
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
