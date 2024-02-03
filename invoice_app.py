@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import filedialog
 from aligned_vision_qb import create_invoice
+
+
 class FileDropApp:
     def __init__(self, master):
         self.master = master
@@ -31,16 +33,20 @@ class FileDropApp:
         self.customer_entry.insert(0, "Aligned Vision Inc")
         self.customer_entry.pack()
 
-        self.file_button = tk.Button(self.master, text="Browse", command=self.browse_file)
+        self.file_button = tk.Button(
+            self.master, text="Browse", command=self.browse_file
+        )
         self.file_button.pack(pady=10)
 
-        self.create_button = tk.Button(self.master, text="Create Invoice", command=self.submit_data)
+        self.create_button = tk.Button(
+            self.master, text="Create Invoice", command=self.submit_data
+        )
         self.create_button.pack(pady=10)
 
     def browse_file(self):
         file_path = filedialog.askopenfilename()
         self.file_label.configure(text=file_path)
-        self.csv_entry.insert(0,file_path)
+        self.csv_entry.insert(0, file_path)
 
     def submit_data(self):
         date = self.date_entry.get()
@@ -49,7 +55,8 @@ class FileDropApp:
         customer = self.customer_entry.get()
 
         # Do something with the data
-        create_invoice(csv,customer,date,number)
+        create_invoice(csv, customer, date, number)
+
 
 root = tk.Tk()
 file_drop_app = FileDropApp(root)

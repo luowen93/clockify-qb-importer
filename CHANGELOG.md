@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Fixed #1 inside the invoice_app.py due to wrong module name
+
 ### Changed
 
 - Moved functions from root directory and into source folder
